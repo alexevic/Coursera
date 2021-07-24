@@ -45,6 +45,18 @@ p {
 	color: black;
 }
 
+#one {
+	background-color: #bfd7ff;
+}
+
+#two {
+	background-color: #ffd9d9;
+}
+
+#three {
+	background-color: #ebebeb;
+}
+
 .row {
 	width: 100%;
 }
