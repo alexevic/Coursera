@@ -2,23 +2,77 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <title>Bootstrap Starter Page</title>
+    <title>Module 3 assignment</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   </head>
 <body>
+  <!--    Header      -->
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!--      Brand name          -->
+          <div class="navbar-brand">
+            <a href="index.html" class="pull-left"><h1>Food, LLC</h1></a>
+          </div>
+          <!--      Dropdown button     -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!--    Dropdown choices    -->
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+            <li>
+              <a href="#chicken">Chicken</a>
+            </li>
+            <li>
+              <a href="#befe">Beef</a>
+            </li>
+            <li>
+              <a href="#sushi">Sushi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--     Main content       -->
+  <div class="row">
+    <div id="main-content" class="container">
+      <h2 id="our-menu" class="text-center">Our menu</h2>
+      <section class="col-xs-12 col-sm-6 col-md-4">
+          <div class="category-text">
+            <h3 id="chicken" class="category-title text-center">Chicken</h3>
+            Sorry, at the moment we don't have supplies to make dishes from chicken.<br>Try again tomorrow&nbsp;:)&nbsp;.<br>P.S. I don't think we will have supplies tomorrow too...
+            <a class="back-to-top" href="#our-menu"><span>Back to Top</span></a>
+          </div>
+      </section>
+      <section class="col-xs-12 col-sm-6 col-md-4">
+          <div class="category-text">
+            <h3 id="befe" class="category-title text-center">Beef</h3>
+            Sorry, at the moment we don't have supplies to make dishes from beef.<br>Try again tomorrow&nbsp;:)&nbsp;.<br>P.S. I don't think we will have supplies tomorrow too...
+            <a class="back-to-top" href="#our-menu"><span>Back to Top</span></a>
+          </div>
+      </section>
+      <section class="col-xs-12 col-sm-12 col-md-4">
+          <div class="category-text">
+            <h3 id="sushi" class="category-title text-center">Sushi</h3>
+            Sorry, at the moment we don't have supplies to make sushi.<br>Try again tomorrow&nbsp;:)&nbsp;.<br>P.S. I don't think we will have supplies tomorrow too...
+            <a class="back-to-top" href="#our-menu"><span>Back to Top</span></a>
+          </div>
+      </section>
+    </div>
+  </div>
 
-  <h1>Hello Coursera!</h1>
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-1.11.3.min.js"></script>

@@ -1,0 +1,164 @@
+body {
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	font-family: 'Indie Flower', cursive;
+	font-weight: bold;
+}
+
+.row {
+	width: 100%;
+}
+
+/*		HEADER		*/
+#header-nav {
+	background-color: #584894;
+	border-radius: 0;
+	border: 0;
+	height: 60px;
+}
+
+.navbar-brand {
+	padding-top: 20px;
+}
+
+/*		BRAND NAME		*/
+.navbar-brand h1 {
+	color: #fff;
+	font-size: 2em;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #fff;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+	float: right;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+}
+
+/*		DROPDOWN MENU		*/
+#nav-list {
+	margin-top: 3px;
+	position: relative;
+    z-index: 1;
+}
+
+#navbar-collapse {
+	background-color: #f6b319;
+}
+
+#nav-list a {
+	color: #000;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#nav-list li {
+	background: #a8a8a8;
+}
+
+#nav-list li:nth-child(2) {
+	background: #d9d9d9;
+}
+
+#nav-list a:hover {
+	background: #fff;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #584894;
+}
+
+/*		BUTTON		*/
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #fff;
+}
+
+.navbar-header button.navbar-toggle {
+	clear: both;
+	margin-top: -36px;
+}
+
+/*		MAIN CONTENT 		*/
+#our-menu {
+	margin: -10px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+.category-text {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #a895c9;
+	width: 98%;
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+.category-title {
+	font-size: 1.7em;
+	font-weight: bold;
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+a.back-to-top {
+	color: black;
+	position: absolute;
+	bottom: 0;
+}
+
+a.back-to-top:hover, a.back-to-top:focus {
+	text-decoration: none;
+	color: #fff;
+}
+
+.category-text {
+	position: relative;
+}
+
+/****** MEDIA QUERIES ******/
+/*		LARGE DEVICES		*/
+@media (min-width: 1200px) {
+
+}
+
+/*		MEDIUM DEVICES		*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	a.back-to-top {
+		bottom: 0;
+		left: 100px;
+	}
+}
+
+/*		SMALL DEVICES		*/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-sm-12 a.back-to-top {
+		bottom: 0;
+		left: 300px;
+	}
+}
+
+/*		X-SMALL DEVICES		*/
+@media (min-width: 521px) and (max-width: 767px) {
+	a.back-to-top {
+		bottom: 0;
+		left: 290px;
+	}
+}
+
+/*		XX-SMALL DEVICES	*/
+@media (max-width: 520px) {
+	a.back-to-top {
+		bottom: 0;
+		left: 160px;
+	}
+}
