@@ -1,0 +1,4 @@
+TODO:
+1. put more functionality to utility_functions.php
+2. template for edit.php positions and educations
+3. fetchAll

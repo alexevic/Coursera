@@ -1,0 +1,87 @@
+<?php
+  session_start();
+  require_once "head.php";
+  require_once "pdo.php";
+  require_once "utility_functions.php";
+ ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aleksander Dzikevič</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Aleksander Dzikevič's Resume Registry</h1>
+      <?php
+        if(isset($_SESSION["name"]))
+        {
+          //Success message after different actions
+          flashMessage();
+
+          echo('<p><a href="logout.php">Logout</a></p>');
+          //*****     DB data search     *****//
+          // query statement
+          $stmt = $pdo->query("SELECT first_name, last_name, headline FROM profile");
+          // we search(fetch) for query
+          $row = $stmt->fetch(PDO::FETCH_ASSOC);
+          // if there is no data, row is equal to false
+          if($row !== false)
+          {
+            echo('<p><table class="styled-table">'."\n");
+            echo('<thead><tr><th>Name</th><th>Headline</th><th>Action</th></thead>');
+            $stmt = $pdo->query("SELECT profile_id, first_name, last_name, headline FROM profile");
+            while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
+            {
+              echo "<tbody><tr><td>";
+              echo('<a href="view.php?profile_id='.$row['profile_id'].'">'.htmlentities($row['first_name'])." ".htmlentities($row['last_name']).'</a>');
+              echo("</td><td>");
+              echo(htmlentities($row['headline']));
+              echo("</td><td>");
+              echo('<a href="edit.php?profile_id='.$row['profile_id'].'">Edit</a> / ');
+              echo('<a href="delete.php?profile_id='.$row['profile_id'].'">Delete</a>');
+              echo("</td></tr>\n");
+            }
+            echo('</tbody></table></p>');
+          }
+          else
+          {
+            echo("<p>No Rows Found</p>");
+          }
+          echo('<p><a href="add.php">Add New Entry</a></p>');
+        }
+        else
+        {
+          flashMessage();
+
+          echo('<p><a href="login.php">Please log in</a></p>');
+          //*****     DB data search     *****//
+          // query statement
+          $stmt = $pdo->query("SELECT first_name, last_name, headline FROM profile");
+          // we search(fetch) for query
+          $row = $stmt->fetch(PDO::FETCH_ASSOC);
+          // if there is no data, row is equal to false
+          if($row !== false)
+          {
+            echo('<p><table class="styled-table">'."\n");
+            echo('<thead><tr><th>Name</th><th>Headline</th></thead>');
+            $stmt = $pdo->query("SELECT profile_id, first_name, last_name, headline FROM profile");
+            while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) )
+            {
+              echo "<tbody><tr><td>";
+              echo('<a href="view.php?profile_id='.$row['profile_id'].'">'.htmlentities($row['first_name'])." ".htmlentities($row['last_name']).'</a>');
+              echo("</td><td>");
+              echo(htmlentities($row['headline']));
+              echo("</td>");
+            }
+            echo('</tbody></table></p>');
+          }
+          else
+          {
+            echo("<p>No Rows Found</p>");
+          }
+        }
+       ?>
+    </div>
+  </body>
+</html>
